@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:job_finder/models/job.dart';
-
 import 'package:job_finder/widgets/icon_text.dart';
+import 'package:job_finder/models/new_freelancers.dart';
 
 
-class JobItem extends StatelessWidget {
-  const JobItem({super.key, required this.job, this.showTime = false});
-  final Job job;
+class FreelancerItem extends StatelessWidget {
+  const FreelancerItem({super.key, required this.freelancer, this.showTime = false});
+  final Freelancer freelancer;
   final bool showTime;
 
 
@@ -35,11 +34,11 @@ class JobItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey.withOpacity(0.1),
                     ),
-                    child: Image.asset(job.logoUrl),
+                    child: Image.asset(freelancer.logoUrl),
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    job.company,
+                    freelancer.company,
                     style: const TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -49,20 +48,20 @@ class JobItem extends StatelessWidget {
                 ],
               ),
               Icon(
-                job.isMark ? Icons.bookmark : Icons.bookmark_outline,
+                freelancer.isMark ? Icons.bookmark : Icons.bookmark_outline,
                 color:
-                    job.isMark ? Theme.of(context).primaryColor : Colors.black,
+                    freelancer.isMark ? Theme.of(context).primaryColor : Colors.black,
               ),
             ],
           ),
           const SizedBox(height: 15),
-          Text(job.title, style: const TextStyle(fontWeight: FontWeight.bold),),
+          Text(freelancer.title, style: const TextStyle(fontWeight: FontWeight.bold),),
           const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-            IconText(icon: Icons.location_on_outlined, text: job.location,),
-            if(showTime) IconText(icon: Icons.access_time_outlined, text: job.time,)
+            IconText(icon: Icons.location_on_outlined, text: freelancer.location,),
+            if(showTime) IconText(icon: Icons.access_time_outlined, text: freelancer.time,)
           ],),
         ],
       ),

@@ -1,4 +1,4 @@
-class Job {
+class Freelancer {
   String company;
   String logoUrl;
   bool isMark;
@@ -7,7 +7,7 @@ class Job {
   String time;
   List<String> desc;
 
-  Job({
+  Freelancer({
     required this.company,
     required this.logoUrl,
     required this.isMark,
@@ -17,14 +17,14 @@ class Job {
     required this.desc,
   });
 
-  static List<Job> generateJobs() {
+  static List<Freelancer> generateFreelancers() {
     return [
-      Job(
-        company: 'Riya Joshi',
+      Freelancer(
+        company: 'Akash Gupta',
         logoUrl: 'assets/images/google_logo.png',
         isMark: false,
-        title: 'Flutter Developer',
-        location: 'New Delhi\nIndia',
+        title: 'MS Word/Excel',
+        location: 'Jaipur,\nIndia',
         time: '₹500 per hour',
         desc: [
           'Creative with eye for shape and color',
@@ -33,11 +33,11 @@ class Job {
           'Interested in the way people choose and use products',
         ],
       ),
-      Job(
-        company: 'Vipul Shetty',
+      Freelancer(
+        company: 'Jatin Jain',
         logoUrl: 'assets/images/linkedin_logo.png',
         isMark: true,
-        title: 'Game Developer',
+        title: 'Mobile App Developer',
         location: 'Bengaluru,\nIdia',
         time: '₹500 per hour',
         desc: [
@@ -47,13 +47,26 @@ class Job {
           'Interested in the way people choose and use products',
         ],
       ),
-
-      Job(
-        company: 'Phulkumar Mishra',
+      Freelancer(
+        company: 'Diya Sehegal',
         logoUrl: 'assets/images/google_logo.png',
         isMark: false,
+        title: 'Web Developer',
+        location: 'Chennai\nIndia',
+        time: '₹500 per hour',
+        desc: [
+          'Creative with eye for shape and color',
+          'Understand different materials and production methods',
+          'How technical, practical and scientific knowledge ',
+          'Interested in the way people choose and use products',
+        ],
+      ),
+      Freelancer(
+        company: 'Avinash Solanki',
+        logoUrl: 'assets/images/linkedin_logo.png',
+        isMark: true,
         title: 'Principle product Design',
-        location: 'Patna\nIndia',
+        location: 'Mumbai,\nIndia',
         time: '₹500 per hour',
         desc: [
           'Creative with eye for shape and color',
@@ -62,26 +75,12 @@ class Job {
           'Interested in the way people choose and use products',
         ],
       ),
-      Job(
-        company: 'Anil Kumar',
-        logoUrl: 'assets/images/linkedin_logo.png',
-        isMark: true,
-        title: 'Data Entry Specialist',
-        location: 'Anndheri, Mumbai\nIndia',
-        time: '₹300 per hour',
-        desc: [
-          'Creative with eye for shape and color',
-          'Understand different materials and production methods',
-          'How technical, practical and scientific knowledge ',
-          'Interested in the way people choose and use products',
-        ],
-      ),
-      Job(
-        company: 'Priya Sharma',
-        logoUrl: 'assets/images/linkedin_logo.png',
-        isMark: true,
-        title: 'WordPress Developer',
-        location: 'BKC, Mumbai\n  India',
+      Freelancer(
+        company: 'Daniel Bryan',
+        logoUrl: 'assets/images/google_logo.png',
+        isMark: false,
+        title: 'Business Analyst',
+        location: '417 Marion, New York\nUnited States',
         time: '₹500 per hour',
         desc: [
           'Creative with eye for shape and color',
@@ -90,6 +89,8 @@ class Job {
           'Interested in the way people choose and use products',
         ],
       ),
+     
+      
     ];
   }
 }

@@ -1,50 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:job_finder/common/constants.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class FreeLancerAppBar extends StatelessWidget {
+  const FreeLancerAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).padding.top,
-        right: 25,
         left: 25,
+        right: 25,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Welcome home',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                ),
+          GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Container(
+              padding: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
+                color: kPrimaryColor,
+                shape: BoxShape.circle,
               ),
-              Text(
-                'Aryan Nandanwar',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28,
-                ),
+              child: const Icon(
+                Icons.arrow_back,
+                color: Colors.white,
               ),
-            ],
+            ),
           ),
           Row(
             children: [
               Container(
-                margin: const EdgeInsets.only(
-                  top: 30,
-                  right: 10,
-                ),
+                margin: const EdgeInsets.only(top: 30, right: 10),
                 transform: Matrix4.rotationZ(100),
                 child: Stack(
                   children: [
-                  const Icon(
+                    const Icon(
                       Icons.notifications_none_outlined,
                       size: 30,
                       color: Colors.grey,
@@ -54,19 +46,14 @@ class HomeAppBar extends StatelessWidget {
                       right: 0,
                       child: Container(
                         padding: const EdgeInsets.all(4),
-                        decoration: const BoxDecoration(
-                          color: Colors.red,
-                          shape: BoxShape.circle,
-                        ),
+                        decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle,),
                       ),
                     ),
                   ],
                 ),
               ),
               const SizedBox(width: 20),
-              ClipOval(
-                child: Image.asset(kAvatarImage, width: 40),
-              ),
+              const Icon(Icons.more_horiz_outlined)
             ],
           ),
         ],
