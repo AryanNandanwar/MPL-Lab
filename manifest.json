@@ -1,0 +1,49 @@
+{
+    "name": "Simple E-commerce",
+    "short_name": "E-commerce",
+    "description": "A simple e-commerce page showcasing products.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f4f4f4",
+    "theme_color": "#333",
+    "icons": [
+      {
+        "src": "images/newpattern.jpg",
+        "sizes": "192x192",
+        "type": "image/jpg",
+        "purpose": "any"
+      },
+      {
+        "src": "images/newblack.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "images/4squarenew.jpg",
+        "sizes": "512x512",
+        "type": "image/jpg",
+        "purpose": "any"
+      }
+    ],
+    "screenshots": [    
+   {
+
+     "src": "images/4squarenew.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg",
+      "form_factor": "wide",
+      "label": "Application"
+    },
+    {
+
+      "src": "images/newblack.png",
+       "sizes": "512x512",
+       "type": "image/png",
+       "form_factor": "narrow",
+       "label": "Application"
+     }
+
+ ]
+  }
+  
